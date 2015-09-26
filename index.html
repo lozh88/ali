@@ -96,8 +96,8 @@
 	<div class="row">
 		<div class="col-lg-12 text-center" id="bio">
 			<h2 class="heading">A baritone living and working in London.</h2>
-
-			<hr />
+			<div id="line" class="line-move"></div>
+			<!-- <hr /> -->
 
 			<p>Alistair has completed the MA vocal studies course at the Royal Academy of Music under Alex Ashworth. He is now a pupil of Nicholas Powell.</p>
 
@@ -292,11 +292,19 @@
     $(this).css( styles );
 	  });
 
-		/* image hover opacity */
+	/* underline movement */
+
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 400) {
+			$('#line').animate({'width': '550px'});
+		}
+	});
+
+	/* image hover opacity */
 	  
-	  $('img').on('mouseenter', function() {
-	 		$(this).animate({'opacity': '.3'}, 200);
-	 		$	 		
+	$('img').on('mouseenter', function() {
+		$(this).animate({'opacity': '.3'}, 200);
+		 		
 	 	});
 
 	 	$('img').on('mouseleave', function() {
