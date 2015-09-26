@@ -125,7 +125,7 @@ h3 {
 }
 
 .image-size {
-	margin: 10px auto;
+	margin: 2.5px auto;
 	width: 100%;
 	padding: 5px;
 }
@@ -156,6 +156,8 @@ button {
 	color: #000;
 	text-align: left;
 }
+
+
 /*---------------------------------
 			MEDIA QUERIES
 ---------------------------------*/
@@ -168,13 +170,17 @@ button {
 
 @media screen and (max-width: 768px) {
 	.buy {
-		height: 80px;
-		width: 180px;
-		font-size: 20px;
+		height: 60px;
+		width: 150px;
+		font-size: 14px;
+	}
+
+	a:hover {
+		text-decoration: none;
 	}
 
 	.heading {
-		margin-top: 20px;
+		margin-top: 15%;
 	}
 
 	h1 {
@@ -187,6 +193,13 @@ button {
 
 	#contact {
 		margin-top: 20px;
+	}
+
+	.venue {
+		background-color: ;
+		margin: 10px;
+		padding: 10px 0;
+		
 	}
 
 
