@@ -31,7 +31,7 @@
 
 <body>
 
-	<!-- Navigation -->
+	<!-- NAVIGATION -->
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
 			
@@ -71,8 +71,6 @@
 				<!-- /.container -->
 	</nav>
 
-		<!-- Image Background Page Header -->
-		<!-- Note: The background image is set within the business-casual.css file. -->
 	<header class="business-header img-responsive">
 		<div class="container">
 			<div class="row">
@@ -93,11 +91,14 @@
 
 	<!-- /.row -->
 
+
+	<!-- BIOGRAPHY -->
+
 	<div class="row">
 		<div class="col-lg-12 text-center" id="bio">
 			<h2 class="heading">A baritone living and working in London.</h2>
-
-			<hr />
+			<div id="line" class="line-move"></div>
+			<!-- <hr /> -->
 
 			<p>Alistair has completed the MA vocal studies course at the Royal Academy of Music under Alex Ashworth. He is now a pupil of Nicholas Powell.</p>
 
@@ -110,6 +111,9 @@
 			<p>Future plans include the reprisal of several roles with OperaUpClose as they tour regional theatres across the UK.</p>
 		</div>
 	</div>
+
+
+	<!-- GALLERY SECTION -->
 
 	<div class="row" id="gallery" >
 		<div class="col-lg-12 text-center gallery" >
@@ -184,6 +188,9 @@
 
 	<!-- /.row -->
 
+
+	<!-- DIARY SECTION -->
+
 	<div class="row">
 		<div class="col-md-12 text-center venue" id="diary">
 					
@@ -221,10 +228,18 @@
 					14th November 2015</p>
 			<button class="buy"><a target="_blank" href="http://www.artsdepot.co.uk/theatre-music/marriage-figaro">Buy Tickets</a></button>
 
+			<!-- <h3> TITLE <br>
+			<span class="emphasis"> COMPANY </span></h3>
+			<p> ADDRESS <br>
+					DATE </p>
+			<button class="buy"><a target="_blank" href=" WEBSITE LINK HERE ">Buy Tickets</a></button> -->
 		</div>
 	</div>
 
 	<!-- /.row -->
+
+
+	<!-- REVIEWS -->
 
 	<div class="row">
 		<div class="col-sm-12 text-center" id="review">
@@ -241,6 +256,9 @@
 		</div>
 	</div>
 
+
+	<!-- CONTACT -->
+
 	<div class="row" data-sr="enter bottom, move 24px, over 2s">
 		<div class="col-sm-12 text-center" id="contact">
 			<h2 class="heading heading-2">Contact Details</h2>
@@ -250,7 +268,7 @@
 		</div>
 	</div>
 
-	<!-- Footer -->
+	<!-- FOOTER - PLEASE DO NOT TOUCH -->
 	<footer>
 		<div class="row">
 			<div class="col-sm-4">
@@ -292,11 +310,19 @@
     $(this).css( styles );
 	  });
 
-		/* image hover opacity */
+	/* underline movement */
+
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 400) {
+			$('#line').animate({'width': '70%'});
+		}
+	});
+
+	/* image hover opacity */
 	  
-	  $('img').on('mouseenter', function() {
-	 		$(this).animate({'opacity': '.3'}, 200);
-	 		$	 		
+	$('img').on('mouseenter', function() {
+		$(this).animate({'opacity': '.3'}, 200);
+		 		
 	 	});
 
 	 	$('img').on('mouseleave', function() {
@@ -307,12 +333,7 @@
 	 	('button').attr('aria-expanded', false);
 	 });
 
-		// $('img').on('mouseleave', function() {
-	 // 		$(this).slideToggle({'transform': 'scale(1)'})
-	 // 		$('.text-credit').text("");
-	 // 	});
-
-
+	
   </script>
 </body>
 
